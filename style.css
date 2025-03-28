@@ -17,6 +17,7 @@
     overflow-y: auto;
     padding-right: 5px; 
 } */
+
 .scroll-container {
     height: auto;
     max-height: unset;
@@ -49,6 +50,7 @@
 
 body {
     overflow: auto !important;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -59,14 +61,17 @@ body {
 body.in-frame {
     padding: 0;
     margin: 0;
+}
+
+/* body.in-frame .scroll-container {
+    max-height: calc(100vh - 20px); 
+} */
+
+body.in-frame .scroll-container {
+    height: auto;
     max-height: 100vh !important;
     overflow-y: auto !important;
 }
-
-body.in-frame .scroll-container {
-    max-height: calc(100vh - 20px); 
-}
-
 .app-container {
     max-width: 1200px;
     margin: 0 auto;
